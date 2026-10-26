@@ -12,9 +12,9 @@ Sitio estático (HTML + CSS + JS), sin dependencias ni compilación.
 
 Edita solo `assets/js/menu-data.js`. Cada producto tiene `name`, `price` (número en pesos, o `null` para "Consultar") y opcionalmente `desc`.
 
-## Cambiar el número de WhatsApp
+## Cambiar los números de WhatsApp
 
-Está en `assets/js/main.js` (`WHATSAPP`) y en los enlaces `wa.me/573116726001` de `index.html` y `menu.html`.
+Los números (311 672 6001 y 311 673 7072) están en `assets/js/main.js` (`WHATSAPP`), en los selectores "Enviar a" y en los enlaces `wa.me/...` de `index.html` y `menu.html`.
 
 ## Publicar gratis con GitHub Pages
 

@@ -462,3 +462,6 @@ p { margin: 0 0 1em; }
 .cart-foot textarea { font: inherit; border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px; resize: none; min-height: 60px; }
 .cart-foot small { color: var(--muted); }
 .form-submit { grid-column: 1 / -1; }
+.info-item strong + strong { margin-top: 2px; }
+.cart-wa { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-weight: 600; }
+.cart-wa select { font: inherit; border: 2px solid var(--line); border-radius: 12px; padding: 8px 10px; background: #fff; }

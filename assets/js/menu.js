@@ -157,7 +157,7 @@ document.getElementById("cart-send").addEventListener("click", () => {
   lines.push("", `Total: ${fmt(total)}${unpriced ? " + productos por consultar" : ""}`);
   const note = document.getElementById("cart-note").value.trim();
   if (note) lines.push(`Notas: ${note}`);
-  window.open(waLink(lines.join("\n")), "_blank", "noopener");
+  window.open(waLink(lines.join("\n"), document.getElementById("cart-wa").value), "_blank", "noopener");
 });
 
 renderCart();

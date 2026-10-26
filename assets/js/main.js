@@ -1,7 +1,7 @@
 /* La Parada del Tigre — scripts compartidos */
-const WHATSAPP = "573116726001";
+const WHATSAPP = ["573116726001", "573116737072"];
 
-const waLink = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+const waLink = (text, number = WHATSAPP[0]) => `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
 
 // ---------- Header ----------
 const header = document.querySelector(".site-header");
@@ -125,7 +125,7 @@ if (form) {
       form.people.value && `• Personas: ${form.people.value}`,
       form.msg.value.trim() && `• Detalles: ${form.msg.value.trim()}`,
     ].filter(Boolean);
-    window.open(waLink(lines.join("\n")), "_blank", "noopener");
+    window.open(waLink(lines.join("\n"), form.wa.value), "_blank", "noopener");
   });
 }
 
