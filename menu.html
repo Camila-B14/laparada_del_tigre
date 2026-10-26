@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú | La Parada del Tigre — Curumaní</title>
+  <meta name="description" content="Menú de La Parada del Tigre: hamburguesas, picadas, asados al carbón, cerdo al barril, entradas, emparedados, frappés, Tropical Mix, micheladas y bar. Pide por WhatsApp.">
+  <meta property="og:title" content="Menú La Parada del Tigre">
+  <meta property="og:image" content="assets/img/menu/burger-hero.webp">
+  <meta name="theme-color" content="#5c0a0e">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Kaushan+Script&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="menu-page">
+
+<header class="site-header solid">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="La Parada del Tigre - Inicio">
+      <img src="assets/img/logo.webp" alt="Logo La Parada del Tigre">
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="index.html#eventos">Eventos</a></li>
+      <li><a href="index.html#ubicacion">Ubicación</a></li>
+      <li><a href="index.html#reservar" class="nav-menu-btn">Reservar</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="menu-hero">
+  <div class="container">
+    <img class="menu-hero-logo" src="assets/img/logo.webp" alt="La Parada del Tigre">
+    <h1>MENÚ</h1>
+    <span class="script">La Parada del Tigre</span>
+    <p>Toca el <strong>+</strong> para armar tu pedido y envíalo directo por WhatsApp. ¡Así de fácil!</p>
+    <div class="menu-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="menu-search" type="search" placeholder="Buscar: hamburguesa, frappé, michelada..." aria-label="Buscar en el menú">
+    </div>
+  </div>
+</section>
+
+<nav class="menu-tabs-wrap" aria-label="Categorías del menú">
+  <div class="container menu-tabs" id="menu-tabs"></div>
+</nav>
+
+<main class="container" id="menu-root"></main>
+
+<section class="container menu-flyers">
+  <div class="menu-callout">
+    <span class="emoji">🐯</span>
+    <div><strong>¿Evento o grupo grande?</strong> Preparamos asados al carbón, cerdo al barril y menús especiales para tu celebración. <a href="index.html#reservar" style="color:var(--yellow)">Escríbenos aquí</a>.</div>
+  </div>
+  <h2 style="margin:40px 0 18px;font-size:1.8rem">Nuestras cartas</h2>
+  <div class="menu-flyers-grid" data-lightbox-group>
+    <button type="button" data-full="assets/img/flyers/menu-hamburguesas.webp"><img src="assets/img/flyers/menu-hamburguesas.webp" alt="Carta de hamburguesas" loading="lazy" style="object-position:top"></button>
+    <button type="button" data-full="assets/img/flyers/bienvenidos.webp"><img src="assets/img/flyers/bienvenidos.webp" alt="Volante de bienvenida La Parada del Tigre" loading="lazy"></button>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-bottom" style="margin-top:0;border-top:0">
+    <span>© <span id="year"></span> La Parada del Tigre · Km 2 Vía al Tigre, Curumaní · WhatsApp <a href="https://wa.me/573116726001">311 672 6001</a> · <a href="https://wa.me/573116737072">311 673 7072</a></span>
+    <span>Precios en pesos colombianos (COP). Sujetos a cambios.</span>
+  </div>
+</footer>
+
+<button class="cart-fab" id="cart-fab" type="button" aria-label="Ver mi pedido">
+  <span class="count">0</span> Ver mi pedido · <span class="fab-total">$0</span>
+</button>
+<div class="cart-backdrop" id="cart-backdrop"></div>
+<aside class="cart-panel" id="cart-panel" aria-label="Mi pedido">
+  <div class="cart-head">
+    <h3>🧾 Mi pedido</h3>
+    <button class="cart-close" id="cart-close" type="button" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span id="cart-total">$0</span></div>
+    <label class="cart-wa">Enviar a:
+      <select id="cart-wa">
+        <option value="573116726001">311 672 6001</option>
+        <option value="573116737072">311 673 7072</option>
+      </select>
+    </label>
+    <textarea id="cart-note" placeholder="Notas: mesa, nombre, sin cebolla, término de la carne..."></textarea>
+    <button class="btn btn-whatsapp" id="cart-send" type="button">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></svg>
+      Enviar pedido por WhatsApp
+    </button>
+    <small>Los productos marcados "Consultar" se confirman por WhatsApp.</small>
+  </div>
+</aside>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Ver carta">
+  <button class="lb-btn lb-close" aria-label="Cerrar">✕</button>
+  <button class="lb-btn lb-prev" aria-label="Anterior">‹</button>
+  <img src="" alt="">
+  <button class="lb-btn lb-next" aria-label="Siguiente">›</button>
+  <span class="lb-count"></span>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/menu.js"></script>
+</body>
+</html>
